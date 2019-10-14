@@ -35,15 +35,21 @@ set(OPENCL_SOURCES
 
 )
 set(LIB_HEADERS
-    src/core/main.h
+
     src/gjk/gjk.h
     src/algorithm/algorithm.h
+    src/core/Point.h
+    src/core/Polygon.h
+    src/core/constants.h
+    src/IO/Reader.h
  )
 set(LIB_SOURCES
-    src/core/main.cxx
+
     src/gjk/gjk.c
     src/algorithm/algorithm.cxx
-
+    src/core/Point.cxx
+    src/core/Polygon.cxx
+    src/IO/Reader.cxx
 )
 embed_resources(MyResources ${OPENCL_SOURCES})
  include_directories(${PROJECT_SOURCE_DIR}/src)
@@ -53,5 +59,5 @@ embed_resources(MyResources ${OPENCL_SOURCES})
 
 
 
-add_executable(main MACOSX_BUNDLE src/core/main.cxx ${SOURCE_FILES} ${MyResources})
-target_link_libraries(main ${VTK_LIBRARIES} -lpthread -lboost_log -lstdc++fs  -lOpenCL libSearch )
+add_executable(polygon-collision-detection src/core/main.cxx )
+target_link_libraries(polygon-collision-detection ${VTK_LIBRARIES} -lpthread -lboost_log -lstdc++fs  -lOpenCL libSearch )
