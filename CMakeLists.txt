@@ -36,13 +36,15 @@ set(OPENCL_SOURCES
 )
 
 set(SOURCE_FILES
-    src/main.cxx
-    src/main.h
+    src/core/main.cxx
+    src/core/main.h
+    src/gjk/gjk.h
+    src/gjk/gjk.c
 )
 embed_resources(MyResources ${OPENCL_SOURCES})
  
 
 
 
-add_executable(main MACOSX_BUNDLE src/main.cxx ${SOURCE_FILES} ${MyResources})
+add_executable(main MACOSX_BUNDLE src/core/main.cxx ${SOURCE_FILES} ${MyResources})
 target_link_libraries(main ${VTK_LIBRARIES} -lpthread -lboost_log -lstdc++fs  -lOpenCL )
