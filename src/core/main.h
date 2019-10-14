@@ -1,3 +1,6 @@
+#ifndef MAIN_H
+#define MAIN_H
+
 #define MAX_VALUE 256
 #include <stdio.h>
 #include <stdlib.h>
@@ -6,6 +9,7 @@
 #include <ctime>
 #include <chrono>
 #include <sstream>
+#include "algorithm/algorithm.h"
 #include "gjk/gjk.h"
 #include <fstream>
 #include "Resource.h"
@@ -90,3 +94,4 @@ typedef boost::compute::ulong_ ULONG;
 typedef boost::compute::uchar_ UCHAR;
 
 
+#endif
