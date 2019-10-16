@@ -9,8 +9,7 @@
 #include <ctime>
 #include <chrono>
 #include <sstream>
-#include "algorithm/algorithm.h"
-#include "gjk/gjk.h"
+
 #include <fstream>
 #include "Resource.h"
 #include <boost/compute/types.hpp>
@@ -58,6 +57,7 @@
 #include <boost/compute/functional/math.hpp>
 #include <chrono>"
 #include <CL/cl.h>
+#include <vector>
 using boost::compute::int_;
 #include <boost/compute/algorithm/sort_by_key.hpp>
 namespace compute = boost::compute;

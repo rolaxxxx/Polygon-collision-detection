@@ -1,6 +1,10 @@
  
 #include "Reader.h"
  
+
+Reader::Reader(){}
+
+
  void Reader::read_polygon_vertices(std::string filename, Polygon poli){
 
 

@@ -1,5 +1,9 @@
+
+#pragma once
+
 #ifndef READER_H
 #define READER_H
+
 #include "core/constants.h"
 #include "core/Polygon.h"
 
